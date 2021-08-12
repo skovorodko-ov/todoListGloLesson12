@@ -8,9 +8,11 @@ const todoControl = document.querySelector('.todo-control'),
 const todoData = []; 
 const localData = JSON.parse(localStorage.getItem('todoData'));
 
-localData.forEach(function(item) {
-todoData.push(item);
-});
+if (localData !== null) {
+  localData.forEach(function(item) {
+    todoData.push(item);
+  }); 
+}
 
 const render = function() {
   todoList.textContent = '';
