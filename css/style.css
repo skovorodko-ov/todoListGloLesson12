@@ -136,6 +136,8 @@ body {
   margin: 0 0 10px 0;
   padding: 14px 100px 14px 14px;
   word-break: break-word;
+  display: flex;
+  align-items: center;
 }
 
 .todo-item:last-of-type {
@@ -180,11 +182,21 @@ body {
 }
 
 .todo-remove {
-  background-image: url("../img/trash.png");
+  width: 50px;
+  height: 50px;
+  background: url("../img/trash.png") no-repeat center;
+  border: none;
+  justify-self: flex-end;
+  cursor: pointer;
 }
 
 .todo-complete {
-  background-image: url("../img/uncheck.png");
+  width: 50px;
+  height: 50px;
+  background: url("../img/uncheck.png") no-repeat center;
+  border: none;
+  justify-self: flex-end;
+  cursor: pointer;
 }
 
 .todo-completed .todo-complete {

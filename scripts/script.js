@@ -23,7 +23,7 @@ const render = function() {
     li.classList.add('todo-item');
 
     li.innerHTML = '<span class="text-todo">' + item.value + '</span>' +
-    '<div class="todo-buttons"></div>' +
+    '<div class="todo-buttons">' +
       '<button class="todo-remove"></button>' +
       '<button class="todo-complete"></button>' +
     '</div>';
@@ -45,8 +45,8 @@ const render = function() {
     });
 
     btnTodoRemove.addEventListener('click', function (e) {
-      let liRemoved = e.target.parentNode;
-      let x = e.target.parentNode.children[0].textContent;
+      let liRemoved = e.target.parentNode.parentNode;
+      let x = e.target.parentNode.parentNode.children[0].textContent;
       liRemoved.remove();
       todoData.forEach(function(item) {
         if (item.value === x) {
